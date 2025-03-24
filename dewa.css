@@ -1,0 +1,150 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Efek umum untuk seluruh halaman */
+body {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #000000;
+}
+
+/* Animasi fade-in untuk seluruh konten */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Efek animasi smooth untuk elemen tertentu saat halaman dimuat */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Menggeser elemen ke bawah sedikit */
+    animation: fadeInElement 1s ease-out forwards;
+}
+
+@keyframes fadeInElement {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Mulai dari bawah */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Posisi normal */
+    }
+}
+
+
+/* Dewa Page */
+.dewa-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dewa-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dewa-img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media query untuk mobile */
+@media screen and (max-width: 768px) {
+    .dewa-img {
+        max-width: 90%;  /* Mengurangi ukuran gambar pada layar kecil */
+        height: auto;    /* Menjaga proporsi gambar */
+    }
+}
+
+
+.dewa-header h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ffbf00;
+}
+
+/* Dewa Content */
+.dewa-content {
+    background-color: rgb(222, 194, 133);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dewa-content p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.dewa-content h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #643002;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #d35400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dewa-header h1 {
+        font-size: 2em;
+    }
+
+    .dewa-content p,
+    .dewa-content h2 {
+        font-size: 1em;
+    }
+
+    .back-btn {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
+
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+    .dewa-page h1 {
+        font-size: 2em;
+    }
+
+    .dewa-page p {
+        font-size: 1em;
+    }
+}
+
+
